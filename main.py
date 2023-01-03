@@ -36,13 +36,8 @@ def opcao2(mensagem):
 @bot.message_handler(commands=["opcao3"])
 def opcao3(mensagem):
   bot.send_message(mensagem.chat.id,  "Valeu! Biasi mandou um abraço de volta")
-
-def verificar(mensagem):
-    return True
  
-
-@bot.message_handler(func=verificar)
-# @bot.message_handler(commands=["ola"])
+@bot.message_handler()
 def responder(mensagem):
     texto = """
     Escolha uma opção para continuar (Clique no item):
@@ -56,7 +51,3 @@ def responder(mensagem):
 
 bot.polling()
 
-#  para manter ele ligado precisa de algum servidor rodando
-#  um exemplo de um é o replit.com, voce pode rodar/criar
-#  codigos la, baixar blibliotecas e deixar rodando, mas é 
-#  pago
